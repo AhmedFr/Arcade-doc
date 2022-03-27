@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IGame &mdash; Lumache 0.1 documentation</title>
+  <title>Games &mdash; Lumache 0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -17,9 +17,7 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Rechercher" href="search.html" />
-    <link rel="next" title="IDisplay" href="IDisplay.html" />
-    <link rel="prev" title="Core" href="Core.html" /> 
+    <link rel="search" title="Rechercher" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,16 +38,8 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="Core.html">Core</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">IGame</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#welcome-to-the-games-doc">Welcome to the Games Doc !</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="#the-interface">The interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IDisplay.html">IDisplay</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IComponent.html">IComponent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IEvent.html">IEvent</a></li>
 </ul>
 
         </div>
@@ -66,9 +56,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>IGame</li>
+      <li>Games</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/IGame.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+            <a href="_sources/Games.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
   </ul>
   <hr/>
@@ -76,8 +66,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="igame">
-<h1>IGame<a class="headerlink" href="#igame" title="Permalink to this headline"></a></h1>
+  <section id="games">
+<h1>Games<a class="headerlink" href="#games" title="Permalink to this headline"></a></h1>
 <section id="welcome-to-the-games-doc">
 <h2>Welcome to the Games Doc !<a class="headerlink" href="#welcome-to-the-games-doc" title="Permalink to this headline"></a></h2>
 <p>To have some fun with our arcade having games to play would be great.</p>
@@ -85,8 +75,8 @@
 <p>If your game has been developed with the <strong>IGame</strong> interface it will 100% run on our Arcade!</p>
 </section>
 </section>
-<section id="the-interface">
-<h1>The interface<a class="headerlink" href="#the-interface" title="Permalink to this headline"></a></h1>
+<section id="the-interface-igame">
+<h1>The interface IGame<a class="headerlink" href="#the-interface-igame" title="Permalink to this headline"></a></h1>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">Arcade</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">IGame</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
@@ -106,16 +96,17 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The interface</p>
+<p>All these functions are here to make sure that the core and the game are able to send each other the needed information</p>
+<p>Init &amp; Stop functions are used by the core to initiate the game and stop it when needed.</p>
+<p>Then the core will in a loop call the getComponents function and sendEvents function while the game is running.
+The first one is to get the components from the game to then give the to the Display lib.
+And in return the core gives to the game the events that happened by calling the sendEvents function.</p>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
-        <a href="Core.html" class="btn btn-neutral float-left" title="Core" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
-        <a href="IDisplay.html" class="btn btn-neutral float-right" title="IDisplay" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

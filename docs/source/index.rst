@@ -1,3 +1,7 @@
+************
+Arcade
+************
+
 Welcome to our Arcade documentation!
 ===================================
 
@@ -20,8 +24,10 @@ and use them.
 The big picture:
 ================
 .. image:: schema.png
-
 And this represents the general loop of the arcade
+
+We suggest you to read the pages dedicated to each part: 
+:ref:`Core:Core`, :ref:`Games:Games`, :ref:`Displays:Displays`, :ref:`Events:Events` & :ref:`Components:Components`
 
 .. warning::
 
@@ -32,6 +38,8 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   Core
    IGame
+   IDisplay
+   IComponent
+   IEvent

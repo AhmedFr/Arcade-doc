@@ -1,7 +1,7 @@
 ************
-IComponent
+Components
 ************
-Welcome to the IComponent Doc !
+Welcome to the Components Doc !
 ===================================
 
 .. code-block:: cpp

@@ -1,7 +1,7 @@
 ************
-IDisplay
+Displays
 ************
-Welcome to the IDisplay Doc !
+Welcome to the Displays Doc !
 ===================================
 
 .. code-block:: cpp

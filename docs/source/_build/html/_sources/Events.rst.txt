@@ -1,7 +1,7 @@
 ************
-IEvent
+Events
 ************
-Welcome to the IEvent Doc !
+Welcome to the Events Doc !
 ===================================
 
 .. code-block:: cpp
