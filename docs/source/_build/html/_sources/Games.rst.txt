@@ -12,7 +12,6 @@ Sadly our arcade can't run every game that exists, but we can promise you one th
 If your game has been developed with the **IGame** interface it will 100% run on our Arcade!
 
 
-
 Interface
 =========
 
@@ -42,8 +41,8 @@ All these functions are here to make sure that the core and the game are able to
 .. hlist::
     :columns: 1
 
-    * Init: Called when the game is launched
-    * Stop: Called when the game is closed
+    * init: Called when the game is launched
+    * stop: Called when the game is closed
     * getGameName: Return the name of the game
     * getComponents: Return components to the graphical parts
     * sendEvents: MAXIME

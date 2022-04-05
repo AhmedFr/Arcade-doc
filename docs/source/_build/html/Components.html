@@ -16,7 +16,9 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Events" href="Events.html" />
+    <link rel="prev" title="Displays" href="Displays.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -37,8 +39,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Games.html">Games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Displays.html">Displays</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#interface">Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Events.html">Events</a></li>
 </ul>
 
         </div>
@@ -67,11 +76,9 @@
              
   <div class="section" id="components">
 <h1>Components<a class="headerlink" href="#components" title="Permalink to this headline"></a></h1>
-<div class="section" id="welcome-to-the-components-doc">
-<h2>Welcome to the Components Doc !<a class="headerlink" href="#welcome-to-the-components-doc" title="Permalink to this headline"></a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
-
-<span class="k">namespace</span> <span class="nn">Arcade</span> <span class="p">{</span>
+<div class="section" id="interface">
+<h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline"></a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span> <span class="nn">Arcade</span> <span class="p">{</span>
     <span class="k">struct</span> <span class="nc">Rect</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
@@ -87,31 +94,52 @@
             <span class="p">};</span>
             <span class="k">virtual</span> <span class="o">~</span><span class="n">IComponent</span><span class="p">()</span> <span class="o">=</span> <span class="k">default</span><span class="p">;</span>
 
-            <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="nf">getId</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Get component ID</span>
-            <span class="k">virtual</span> <span class="n">Type</span> <span class="nf">getType</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Get component type</span>
-            <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">getFile</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>    <span class="c1">// Get file associated with component</span>
-            <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">getX</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Get X position (OBJECT/TEXT)</span>
-            <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">getY</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Get Y position (OBJECT/TEXT)</span>
-            <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">getWidth</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Get width (OBJECT/TEXT)</span>
-            <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">getHeight</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Get height (OBJECT/TEXT)</span>
-            <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">getFontSize</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>    <span class="c1">// Get text (TEXT)</span>
-            <span class="k">virtual</span> <span class="n">Rect</span> <span class="nf">getRect</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Get animated sprite rect (OBJECT) #THROW if no rect</span>
-            <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">getText</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>    <span class="c1">// Get font size (TEXT)</span>
+            <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="nf">getId</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">virtual</span> <span class="n">Type</span> <span class="nf">getType</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">getFile</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">getX</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">getY</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">getWidth</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">getHeight</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">virtual</span> <span class="kt">int</span> <span class="nf">getFontSize</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">virtual</span> <span class="n">Rect</span> <span class="nf">getRect</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">getText</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
             <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">setX</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="k">const</span> <span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
             <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">setY</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="k">const</span> <span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
             <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">setText</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="k">const</span> <span class="n">text</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">setRect</span><span class="p">(</span><span class="n">Rect</span> <span class="k">const</span> <span class="n">rect</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">};</span>
 <span class="p">}</span>
 </pre></div>
 </div>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>getId:</p></li>
+<li><p>getType:</p></li>
+<li><p>getFile:</p></li>
+<li><p>getX:</p></li>
+<li><p>getY:</p></li>
+<li><p>getWidth:</p></li>
+<li><p>getHeight:</p></li>
+<li><p>getFontSize:</p></li>
+<li><p>getRect:</p></li>
+<li><p>getText:</p></li>
+<li><p>setX:</p></li>
+<li><p>setY:</p></li>
+<li><p>setText:</p></li>
+<li><p>setRect:</p></li>
+</ul>
+</td></tr></table>
 </div>
 </div>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Displays.html" class="btn btn-neutral float-left" title="Displays" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Events.html" class="btn btn-neutral float-right" title="Events" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

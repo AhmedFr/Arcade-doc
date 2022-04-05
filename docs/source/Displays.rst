@@ -1,8 +1,15 @@
-************
+********
 Displays
-************
-Welcome to the Displays Doc !
-===================================
+********
+
+Description
+===========
+
+Description
+
+
+Interface
+=========
 
 .. code-block:: cpp
 
@@ -18,3 +25,15 @@ Welcome to the Displays Doc !
                 virtual std::vector<std::unique_ptr<IEvent>> &getEvents() = 0;
         };
     }
+
+All these functions are here to make sure that the core and the display are able to send each other the needed information
+
+.. hlist::
+    :columns: 1
+
+    * init: Called when the display is launched
+    * stop: Called when the display is closed
+    * getLibName: Return the name of the lib
+    * display: Display components from the game parts
+    * getEvents: Return the new events
+    
