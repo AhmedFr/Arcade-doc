@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Events &mdash; Lumache 0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -77,40 +78,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="events">
+  <section id="events">
 <h1>Events<a class="headerlink" href="#events" title="Permalink to this headline"></a></h1>
-<div class="section" id="description">
+<section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline"></a></h2>
 <p>The graphical part create event and they are used by game part.
 Events are used to trigger actions in game part.
 They contain key code and mouse position if event is in relation to mouse.</p>
-</div>
-<div class="section" id="interface">
+</section>
+<section id="interface">
 <h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline"></a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span> <span class="nn">Arcade</span> <span class="p">{</span>
-    <span class="k">struct</span> <span class="nc">Pos</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
-    <span class="p">};</span>
-    <span class="k">class</span> <span class="nc">IEvent</span> <span class="p">{</span>
-        <span class="k">public</span><span class="o">:</span>
-            <span class="k">virtual</span> <span class="o">~</span><span class="n">IEvent</span><span class="p">()</span> <span class="o">=</span> <span class="k">default</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">Arcade</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Pos</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">IEvent</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">            </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">IEvent</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span><span class="w"></span>
 
-            <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="nf">getKey</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Get key</span>
-            <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">setKey</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="k">const</span> <span class="n">key</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>   <span class="c1">// Set key</span>
-            <span class="k">virtual</span> <span class="n">Pos</span> <span class="nf">getMousePos</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// Get mouse pos</span>
-            <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">getData</span><span class="p">()</span> <span class="k">const</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>    <span class="c1">// Get event text data</span>
-    <span class="p">};</span>
-<span class="p">}</span>
+<span class="w">            </span><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="nf">getKey</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// Get key</span>
+<span class="w">            </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setKey</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="c1">// Set key</span>
+<span class="w">            </span><span class="k">virtual</span><span class="w"> </span><span class="n">Pos</span><span class="w"> </span><span class="nf">getMousePos</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Get mouse pos</span>
+<span class="w">            </span><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">getData</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">    </span><span class="c1">// Get event text data</span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p><strong>getKey:</strong> Get key code, code are based on the SFML key code, see “Key Macro” below</p></li>
 <li><p><strong>getMousePos:</strong> Get mouse position, when event isn’t a mouse event return a Pos(0, 0)</p></li>
-<li><p><strong>getData:</strong> MAXIME</p></li>
+<li><p><strong>getData:</strong> Get text data</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The text data is notably used for players names or libs names in assocation with the <strong>IGame::sendEvent</strong> fonction.</p>
 </div>
-<div class="section" id="key-code">
+</section>
+<section id="key-code">
 <h2>Key Code<a class="headerlink" href="#key-code" title="Permalink to this headline"></a></h2>
 <table class="hlist"><tr><td><ul class="simple">
 <li><p>BACKSPACE = 59</p></li>
@@ -153,8 +158,8 @@ They contain key code and mouse position if event is in relation to mouse.</p>
 <li><p>Z = 25</p></li>
 </ul>
 </td></tr></table>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
