@@ -44,17 +44,17 @@ Interface
 .. hlist::
     :columns: 1
 
-    * getId:
-    * getType:
-    * getFile:
-    * getX:
-    * getY:
-    * getWidth:
-    * getHeight:
-    * getFontSize:
-    * getRect:
-    * getText:
-    * setX:
-    * setY:
-    * setText:
-    * setRect:
+    * getId: Return component id
+    * getType: Return component type (OBJECT, SOUND, TEXT)
+    * getFile: Return file path => OBJECT or SOUND
+    * getX: Return x position (in percent)
+    * getY: Return y position (in percent)
+    * getWidth: Return width (in percent)
+    * getHeight: Return height (in percent)
+    * getFontSize: Return font size => TEXT
+    * getRect: Return Rect (in pixels) => OBJECT or SOUND
+    * getText: Return string => TEXT
+    * setX: Set x position (in percent)
+    * setY: Set y position (in percent)
+    * setText: Set string => TEXT
+    * setRect: Set Rect (in pixels) => OBJECT or SOUND
