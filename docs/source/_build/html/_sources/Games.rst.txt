@@ -1,9 +1,9 @@
-************
+*****
 Games
-************
+*****
 
-Welcome to the Games Doc !
-===================================
+Description
+===========
 
 To have some fun with our arcade having games to play would be great.
 
@@ -12,9 +12,9 @@ Sadly our arcade can't run every game that exists, but we can promise you one th
 If your game has been developed with the **IGame** interface it will 100% run on our Arcade!
 
 
-************
-The interface IGame
-************
+
+Interface
+=========
 
 .. code-block:: cpp
 
@@ -22,19 +22,20 @@ The interface IGame
         class IGame {
             public:
                 virtual ~IGame() = default;
-    
+
                 virtual void init() = 0;
                 virtual void stop() = 0;
                 virtual std::string getGameName() const = 0;
                 virtual std::vector<std::unique_ptr<IComponent>> &getComponents() = 0;
                 virtual void sendEvents(std::vector<std::unique_ptr<IEvent>> &events) = 0;
-                virtual IEvent *getEvent() = 0; // Get event, null if no event
+                virtual IEvent *getEvent() = 0;
                 virtual void sendDisplayLibs(std::vector<std::string> const libs) = 0;
                 virtual void sendGameLibs(std::vector<std::string> const libs) = 0;
                 virtual void setPlayerName(std::string const name) = 0;
                 virtual std::string getPlayerName() const = 0;
         };
     }
+
 
 All these functions are here to make sure that the core and the game are able to send each other the needed information
 

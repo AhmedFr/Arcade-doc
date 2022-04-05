@@ -1,12 +1,12 @@
-************
+******
 Arcade
-************
+******
 
 Welcome to our Arcade documentation!
-===================================
+====================================
 
-**Arcade** is a c++ project made in our second year in epitech.
-The Project consists of creating a fully functionnal arcade with some
+**Arcade** is a c++ project made in our second year in Epitech.
+The Project consists to creating a fully functionnal arcade with some
 special features, the main one is to be able to dynamicaly change the
 graphical library used to render the game or to swap games on the go.
 We have to this without the game having the knowledge of which graphical
@@ -21,11 +21,12 @@ Thus there is three parts to this project:
 To get this ecosystem to work, we implemented abstract interfaces so all parts can easily communicate information
 and use them.
 
-The big picture:
-================
+Schema
+======
 .. image:: schema.png
-And this represents the general loop of the arcade
 
+Represents the general loop of the arcade
+   
 We suggest you to read the pages dedicated to each part: 
 :ref:`Core:Core`, :ref:`Games:Games`, :ref:`Displays:Displays`, :ref:`Events:Events` & :ref:`Components:Components`
 
@@ -34,12 +35,10 @@ We suggest you to read the pages dedicated to each part:
    Don't underestimate the difficulty of the project only by seeing this page.
 
 Contents
---------
-
+========
 .. toctree::
-
    Core
-   IGame
-   IDisplay
-   IComponent
-   IEvent
+   Games
+   Displays
+   Components
+   Events
