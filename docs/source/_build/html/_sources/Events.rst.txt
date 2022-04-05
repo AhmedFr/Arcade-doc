@@ -2,6 +2,13 @@
 Events
 ******
 
+Description
+===========
+
+The graphical part create event and they are used by game part.
+Events are used to trigger actions in game part.
+They contain key code and mouse position if event is in relation to mouse.
+
 Interface
 =========
 

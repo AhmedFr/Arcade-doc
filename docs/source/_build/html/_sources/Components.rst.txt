@@ -2,6 +2,13 @@
 Components
 **********
 
+Description
+===========
+
+Component contain information to describe object drawn by display part.
+There are 3 component type from Type enum: OBJECT, TEXT and SOUND.
+It's possible to select drawn area thanks to Rect data, this gives us the opportunity to animate component with sprite sheet for example.
+
 Interface
 =========
 

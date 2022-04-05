@@ -5,7 +5,8 @@ Displays
 Description
 ===========
 
-Description
+Display part deals with components to display them.
+This part also take care of get event to send them to the game part.
 
 
 Interface
