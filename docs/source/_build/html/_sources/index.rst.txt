@@ -42,3 +42,4 @@ Contents
    Displays
    Components
    Events
+   Coordinates
