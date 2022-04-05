@@ -39,8 +39,16 @@ Interface
 
 All these functions are here to make sure that the core and the game are able to send each other the needed information
 
-Init & Stop functions are used by the core to initiate the game and stop it when needed.
+.. hlist::
+    :columns: 1
 
-Then the core will in a loop call the getComponents function and sendEvents function while the game is running.
-The first one is to get the components from the game to then give the to the Display lib.
-And in return the core gives to the game the events that happened by calling the sendEvents function.
+    * Init: Called when the game is launched
+    * Stop: Called when the game is closed
+    * getGameName: Return the name of the game
+    * getComponents: Return components to the graphical parts
+    * sendEvents: MAXIME
+    * getEvent: MAXIME
+    * sendDisplayLibs: MAXIME
+    * sendGameLibs: MAXIME
+    * setPlayerName: Set the name of the current player
+    * getPlayerName: Return the name of the current player

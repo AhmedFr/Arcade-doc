@@ -25,10 +25,10 @@ Interface
 
 - **getKey:** Get key code, code are based on the SFML key code, see "Key Macro" below
 - **getMousePos:** Get mouse position, when event isn't a mouse event return a Pos(0, 0)
-- **getData:** TO DOOOOOOOOOOOOOOO
+- **getData:** MAXIME
 
 Key Code
-=========
+========
 
 .. hlist::
     :columns: 2
