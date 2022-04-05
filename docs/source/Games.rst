@@ -38,16 +38,13 @@ Interface
 
 All these functions are here to make sure that the core and the game are able to send each other the needed information
 
-.. hlist::
-    :columns: 1
-
-    * init: Called when the game is launched
-    * stop: Called when the game is closed
-    * getGameName: Return the name of the game
-    * getComponents: Return components to the graphical parts
-    * sendEvents: MAXIME
-    * getEvent: MAXIME
-    * sendDisplayLibs: MAXIME
-    * sendGameLibs: MAXIME
-    * setPlayerName: Set the name of the current player
-    * getPlayerName: Return the name of the current player
+- **init:** Called when the game is launched
+- **stop:** Called when the game is closed
+- **getGameName:** Return the name of the game
+- **getComponents:** Return components to the graphical parts
+- **sendEvents:** MAXIME
+- **getEvent:** MAXIME
+- **sendDisplayLibs:** MAXIME
+- **sendGameLibs:** MAXIME
+- **setPlayerName:** Set the name of the current player
+- **getPlayerName:** Return the name of the current player

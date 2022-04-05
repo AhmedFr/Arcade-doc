@@ -11,12 +11,9 @@ There are one special case for image rect.
 
 List
 ====
-.. hlist::
-    :columns: 1
-
-    * Events
-        * Mouse position : Percent
-    * Components
-        * X and Y coordinates : Percent
-        * Width and Height : Percent
-        * Rect : Pixels
+- **Events**
+    - **Mouse position** : Percent
+- **Components**
+    - **X and Y coordinates** : Percent
+    - **Width and Height** : Percent
+    - **Rect** : Pixels
