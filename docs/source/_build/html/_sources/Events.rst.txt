@@ -30,7 +30,7 @@ Interface
 .. note:: The text data is notably used for players names or libs names in assocation with the **IGame::sendEvent** fonction.
 
 Key Code
-=========
+========
 
 .. hlist::
     :columns: 2
