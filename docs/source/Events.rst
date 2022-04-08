@@ -32,7 +32,9 @@ Interface
 
 - **getKey:** Get key code, code are based on the SFML key code, see "Key Macro" below
 - **getMousePos:** Get mouse position, when event isn't a mouse event return a Pos(0, 0)
-- **getData:** MAXIME
+- **getData:** Get text data
+
+.. note:: The text data is notably used for players names or libs names in assocation with the **IGame::sendEvent** fonction.
 
 Key Code
 ========
