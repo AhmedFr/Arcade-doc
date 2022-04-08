@@ -23,7 +23,7 @@ and use them.
 
 Schema
 ======
-.. image:: schema.png
+.. image:: assets/schema.png
 
 Represents the general loop of the arcade
    
