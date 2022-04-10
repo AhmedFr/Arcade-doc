@@ -43,3 +43,7 @@ Contents
    Components
    Events
    Coordinates
+   Scores
+   Menu
+   SolarFox
+   Nibbler

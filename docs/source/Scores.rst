@@ -14,4 +14,4 @@ In order to have this system, we need a scoreboard.txt file placed where the arc
 This file contains the highest score of each game which can then be red or modified.
 To add a game score to the file, you need to follow this template:
 
-    GAME_NAME: PLAYER SCORE
+    GAME_NAME: PLAYER_NAME SCORE

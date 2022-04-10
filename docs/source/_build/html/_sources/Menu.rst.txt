@@ -18,10 +18,9 @@ No game or lib will change until you click on the start button.
 Commands
 ===========
 Select:
-
     - Mouse click: use your mouse to select the game and display lib you want
+
 Else:
-_____
     - R Key -> Restart the game
     - N Key -> Switch to next Game
     - B Key -> Switch to previous Game

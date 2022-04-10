@@ -19,10 +19,9 @@ Commands
 ===========
 
 Movements:
-_________
     - Arrow keys -> Left, Right, Up and Down
+
 Else:
-_____
     - D Key -> Slow down ennemy missiles and frequency
     - P Key -> Pause the game
     - R Key -> Restart the game
